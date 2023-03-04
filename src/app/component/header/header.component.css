@@ -1,0 +1,39 @@
+.phone {
+  border-radius: 50% !important;
+  border-width: 2px;
+  height: 42px !important;
+  width: 42px !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.phone::after {
+  content: "";
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: green;
+  position: absolute;
+  bottom: -5px;
+  right: 4px;
+}
+
+.phone i {
+  font-size: 20px;
+}
+
+.has-submenu a {
+  font-weight: 500 !important;
+}
+
+.navLogo {
+  width: 180px !important;
+}
+
+.menu-extras {
+
+  padding: 25px 0px;
+  text-align: center;
+  margin-top: 4px;
+}

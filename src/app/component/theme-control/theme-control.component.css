@@ -1,0 +1,135 @@
+#themeControl select {
+  width: fit-content !important;
+  border: 0;
+  background-color: transparent;
+  text-align: center;
+}
+
+#themeLanguage {
+  background-color: transparent;
+  top: 0;
+  max-height: 33px;
+  width: 100%;
+}
+
+#themeLanguage .container {
+  height: 33px !important;
+  max-height: 100% !important;
+}
+
+.part,
+.text-container {
+  height: 100% !important;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: left !important;
+}
+
+.part.left span {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 0 10px;
+  position: relative;
+  z-index: 2;
+}
+
+.part.right,
+.part.left {
+  width: fit-content !important;
+}
+
+.part.left .lang-btn {
+  background-color: transparent !important;
+  color: white !important;
+  outline: none !important;
+  border: none !important;
+  border-radius: 0 !important;
+  padding: 0px !important;
+}
+
+.part.left .lang-btn img {
+  width: 25px;
+  height: 25px;
+}
+
+.dropdown-menu {
+  z-index: 99999999999999999999;
+  min-width: fit-content !important;
+  border-width: 0 0px 0 3px;
+  border-style: solid;
+}
+
+.dropdown-item {
+  width: fit-content !important;
+  position: relative;
+  padding: 1px 1px 0px 6px !important;
+  border-left: 4px solid red;
+}
+
+.dropdown-item.ksa {
+  border-color: green;
+}
+
+.dropdown-item.kingdom {
+  border-color: red;
+}
+
+.dropdown-item.germany {
+  border-color: dodgerblue;
+}
+
+.dropdown-item img {
+  width: 25px;
+  height: 25px;
+}
+
+.dropdown-toggle::after {
+  display: none;
+}
+
+
+/* ========================= */
+
+.theme-media-list li a {
+  color: #0A004F;
+  width: 35px !important;
+  height: 28px !important;
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: 0.25s !important;
+}
+
+.theme-media-list li a:hover {
+  background-color: #0A004F !important;
+  color: white;
+}
+
+
+/* ========================= */
+
+#themeLang {
+  z-index: 99999999999999999999 !important;
+}
+
+.bt {
+  width: 115px;
+  background: #F9F9FB;
+  border: 1px solid #DFDFEC;
+  border-radius: 10px;
+  padding: 5px;
+  text-align: center;
+  margin-top: 4px;
+}
+
+
+/* .bt:hover {
+    background: #7464FC;
+    color: white;
+} */

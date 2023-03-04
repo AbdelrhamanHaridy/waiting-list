@@ -1,0 +1,150 @@
+<section class="hero">
+  <div class="container-fluid" style="margin-top: 120px;">
+
+    <div class="row padd">
+
+
+      <div class="parent col-lg-12 ">
+
+        <div class="one-image">
+          <div class="img3">
+            <img [src]="Src" class="w-100" alt="">
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+
+
+
+  </div>
+</section>
+
+
+
+
+<div class="container">
+
+  <div class="row d-flex justify-content-center align-items-center">
+
+
+
+    <div class="col-lg-10 col-md-10 col-sm-10 ">
+
+      <div class="form-container w-100">
+        <div class="sign">
+          <p class="text-center txt"><span>{{"join-1" | translate}}</span>{{"join" | translate}}</p>
+        </div>
+        <form [formGroup]="contactForm" class="mb-3" (submit)="sginUp(contactForm.value)">
+          <div class="d-flex justify-content-center">
+            <div class="email-container">
+              <p style="font-size: 25px;
+              text-align: center;
+              padding-bottom: 20px;">{{"join-p" | translate}}</p>
+              <div class="email-field">
+                <!-- formControlName="email" -->
+                <input type="email" formControlName="email" name="email" class="form-control inp" id="email"
+                  style="height: 52px; border-radius: 40px;" placeholder='{{"email"|translate}}'>
+                <div class="envelope">
+                  <img src="assets/images/pay_ship_images/envelope.svg" alt="">
+                </div>
+              </div>
+            </div>
+          </div>
+
+
+          <div class="row">
+            <div class="d-flex">
+              <div class="wich">
+                <h3 class=" text-center txth4" style="font-family: 'Tajawal';
+                          font-style: normal;
+                          font-weight: 700;
+                          font-size: 20px;
+
+                          padding-top: 6px;
+
+                          text-align: start;
+
+                          color: #8d8d8d;
+                          ">{{"On which platform you will use pay ship" |translate}}
+                </h3>
+              </div>
+            </div>
+
+            <div class="row gap-md-2 d-md-flex" style="margin-top: 45px;">
+              <div *ngFor="let item of platforms; let i = index" class="mb-2 mb-md-0 col-md-6 col-lg-6 row recta">
+                <label [for]="item.name" class="recta-check" [class.active]="item.isSelected">
+                  <div class="recta-div">
+                    <img width="50px" height="50px" [src]="item.img" alt="">
+                    <span class="recta-name">
+                      {{item.name |translate}}
+                    </span>
+                  </div>
+                </label>
+                <input (change)="onChangeItem($event)" [value]="item.arName" [ngModelOptions]="{standalone: true}"
+                  [(ngModel)]="item.isSelected" type="checkbox" name="" [id]="item.name" class="check d-none" />
+              </div>
+              <div class="mb-2 mb-md-0 col-md-6 col-lg-6 row recta">
+                <label class="recta-check">
+                  <input type="text" formControlName="otherPlatform" placeholder="{{'Other' |translate}}"
+                    style="padding:10px 20px; border-radius: 10px; border: 1px;">
+                </label>
+              </div>
+            </div>
+          </div>
+
+
+          <br>
+
+          <div class="d-flex ">
+            <div style="width: 75%; ">
+              <h3 class=" txth4" style="font-family: 'Tajawal';
+                    font-style: normal;
+                    font-weight: 700;
+                    font-size: 20px;
+                    padding-top: 6px;
+                    text-align: start;
+                    color: #8d8d8d;
+                    ">{{"problem" |translate}}
+              </h3>
+            </div>
+          </div>
+          <div class="input-group row" style="margin-top: 45px;">
+            <div *ngFor="let item of problems; let i = index" class="mb-2 col-md-6 col-lg-6 recta">
+              <label [for]="item.name" class="recta-check" [class.active]="item.isSelected">
+                <div class="recta-div">
+                  <span class="recta-name">
+                    {{item.name |translate}}
+                  </span>
+                </div>
+              </label>
+              <input (change)="onChangeProblem($event)" [value]="item.arName" [ngModelOptions]="{standalone: true}"
+                [(ngModel)]="item.isSelected" type="checkbox" name="" [id]="item.name" class="check d-none" />
+            </div>
+            <div class="mb-2 col-md-6 col-lg-6 recta">
+              <label class="recta-check">
+                <input type="text" formControlName="otherProblem" placeholder="{{'Other' |translate}}"
+                  style="padding:10px 20px; border-radius: 10px; border: 1px;">
+              </label>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-center " style="margin-top: 50px;">
+            <div style="width: 200px;">
+              <!-- [disabled]="contactForm.invalid" -->
+              <button type="submit" [disabled]="contactForm.invalid" class="btn btn-primary sub">{{"Submit"
+                |translate}}</button>
+            </div>
+          </div>
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+
+</div>
+<app-footer></app-footer>

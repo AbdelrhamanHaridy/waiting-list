@@ -1,0 +1,21 @@
+<header id="topnav" class="defaultscroll sticky py-1" (window:scroll)="windowScroll()">
+  <div class="container bg- d-flex flex justify-content-between align-items-center">
+
+    <div>
+      <a class="logo" routerLink="/" class="w-50">
+        <img src="assets/images/png/Asset.png" class="navLogo l-dark logo-light-mode" alt="">
+
+      </a>
+    </div>
+
+
+    <div class="menu-extras">
+      <app-theme-control (changeMode)="changeMode($event)"></app-theme-control>
+    </div>
+
+
+
+
+  </div>
+
+</header>

@@ -1,0 +1,14 @@
+.footer-list li a {
+  transition: 0.2s !important;
+  color: white;
+}
+
+.footer-list li a:hover {
+  opacity: 0.7;
+}
+
+.site-version {
+  position: absolute;
+  top: 0;
+  right: 0;
+}

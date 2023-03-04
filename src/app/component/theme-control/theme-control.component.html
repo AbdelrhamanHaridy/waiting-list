@@ -1,0 +1,23 @@
+<section id="themeControl" class="py-2 ">
+  <div class="container ">
+
+    <!-- ===== S T A R T  T H E M E  L A N G U A G E  C O N T R O L ===== -->
+    <div class="theme-language ">
+
+      <!-- <button [(ngModel)]="currentLang" (click)="toggleLang()" class="bt">
+        <img src="../../../assets/images/pay_ship_images/Vector.png" alt="" style="    width: 18px;">
+
+      </button> -->
+
+      <select class="me-3" #locale [(ngModel)]="currentLang" (change)="changeLocale(locale.value)">
+        <option value="ar">AR</option>
+        <option value="en">EN</option>
+      </select>
+
+    </div>
+
+
+
+
+  </div>
+</section>
